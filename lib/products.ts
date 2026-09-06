@@ -1,10 +1,10 @@
-Export type Product = {
+export type Product = {
   id: string
   name: string
   description: string
   price: number
   image: string
-  category: "لوحات" | "حساسات" | "شاشات" | "مكونات" | "محركات"
+  category: "لوحات" | "حساسات" | "مكونات" | "محركات"
 }
 
 export const WHATSAPP_NUMBER = "9647832213080"
@@ -17,14 +17,6 @@ export const products: Product[] = [
     price: 7000,
     image: "/products/arduino-uno.png",
     category: "لوحات",
-  },
-  {
-    id: "orange-pi-5-plus-16gb",
-    name: "Orange Pi 5 Plus 16GB",
-    price: 155000,
-    category: "لوحات",
-    image: "/products/orange-pi-5-plus.png",
-    description: "لوحة قوية بمعالج RK3588 وذاكرة 16GB"
   },
   {
     id: "breadboard",
@@ -54,7 +46,7 @@ export const products: Product[] = [
     id: "gas-sensor",
     name: "حساس غاز",
     description: "حساس MQ-2 للكشف عن تسرب الغاز والدخان في البيئة.",
-    price: 4000,
+    price: 3000,
     image: "/products/gas-sensor.png",
     category: "حساسات",
   },
@@ -86,7 +78,7 @@ export const products: Product[] = [
     id: "soil-sensor",
     name: "حساس رطوبة تربة",
     description: "حساس لقياس نسبة رطوبة التربة في مشاريع الزراعة الذكية.",
-    price: 2000,
+    price: 1500,
     image: "/products/soil-sensor.png",
     category: "حساسات",
   },
@@ -131,8 +123,8 @@ export function formatPrice(price: number) {
 }
 
 export function whatsappLink(product: Product) {
-  const message = مرحباً، أرغب بطلب المنتج التالي من متجر Pixel Store:\n\n• ${product.name}\n• السعر: ${formatPrice(
+  const message = `مرحباً، أرغب بطلب المنتج التالي من متجر Pixel Store:\n\n• ${product.name}\n• السعر: ${formatPrice(
     product.price,
-  )} دينار عراقي\n\nهل هو متوفر؟
-  return https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}
+  )} دينار عراقي\n\nهل هو متوفر؟`
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
