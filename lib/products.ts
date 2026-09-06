@@ -11,6 +11,22 @@ export const WHATSAPP_NUMBER = "9647832213080"
 
 export const products: Product[] = [
   {
+    id: "orange-pi-5-plus",
+    name: "Orange Pi 5 Plus 16GB",
+    description: "حاسبة لوحية قوية بذاكرة 16GB ومعالج ثماني النواة لمشاريع الذكاء الاصطناعي والأنظمة المدمجة.",
+    price: 155000,
+    image: "/products/orange-pi-5-plus.png",
+    category: "لوحات",
+  },
+  {
+    id: "esp32-s3-n16r8",
+    name: "ESP32-S3 N16R8",
+    description: "متحكم قوي مع WiFi و Bluetooth، ذاكرة فلاش 16MB و PSRAM 8MB لمشاريع إنترنت الأشياء.",
+    price: 16000,
+    image: "/products/esp32-s3.png",
+    category: "لوحات",
+  },
+  {
     id: "arduino-uno",
     name: "أردوينو Uno",
     description: "لوحة تحكم متكاملة R3 مثالية لجميع مشاريع الإلكترونيات والبرمجة.",
@@ -43,6 +59,14 @@ export const products: Product[] = [
     category: "محركات",
   },
   {
+    id: "dht-sensor",
+    name: "حساس رطوبة الجو والحرارة",
+    description: "حساس DHT لقياس درجة الحرارة ونسبة الرطوبة في الجو بدقة لمشاريع المناخ.",
+    price: 4000,
+    image: "/products/dht-sensor.png",
+    category: "حساسات",
+  },
+  {
     id: "gas-sensor",
     name: "حساس غاز",
     description: "حساس MQ-2 للكشف عن تسرب الغاز والدخان في البيئة.",
@@ -54,7 +78,7 @@ export const products: Product[] = [
     id: "wires",
     name: "وايرات توصيل",
     description: "مجموعة أسلاك توصيل ملونة لربط المكونات على البريدبورد.",
-    price: 2000,
+    price: 2500,
     image: "/products/wires.png",
     category: "مكونات",
   },
