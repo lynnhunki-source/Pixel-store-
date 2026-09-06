@@ -17,8 +17,16 @@ export const products: Product[] = [
     price: 7000,
     image: "/products/arduino-uno.png",
     category: "لوحات",
-  },
-  {
+    },
+    {
+    id: "orange-pi-5-plus-16gb",
+    name: "Orange Pi 5 Plus 16GB",
+    price: 155000,
+    category: "لوحات",
+    image: "/products/orange-pi-5-plus.png",
+    description: "لوحة قوية بمعالج RK3588 وذاكرة 16GB"
+    },
+    }
     id: "breadboard",
     name: "بريدبورد",
     description: "لوحة تجارب بدون لحام لتوصيل الدوائر الإلكترونية بسهولة.",
