@@ -27,18 +27,15 @@ export default function Page() {
             <span className="h-px flex-1 bg-border" />
           </div>
 
-          <div
-            dir="ltr"
-            className="flex flex-col items-center gap-1 rounded-lg border border-border bg-background px-5 py-3"
-          >
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              Developed &amp; Managed by
+          <div className="flex flex-col items-center gap-1.5 rounded-lg border border-border bg-background px-6 py-3.5">
+            <span className="text-[10px] tracking-[0.25em] text-muted-foreground">
+              تطوير وإدارة المنصّة
             </span>
-            <span className="font-mono text-sm font-semibold text-primary">Eng. Abdullah Saad</span>
+            <span className="text-sm font-bold text-primary">المهندس عبدالله سعد</span>
           </div>
 
           <p className="text-[11px] text-muted-foreground">
-            © {new Date().getFullYear()} Pixel Store
+            جميع الحقوق محفوظة © {new Date().getFullYear()} · متجر Pixel Store
           </p>
         </div>
       </footer>
