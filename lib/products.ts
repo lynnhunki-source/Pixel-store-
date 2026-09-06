@@ -24,7 +24,7 @@ export const products: Product[] = [
     id: "orange-pi-5-plus",
     name: "Orange Pi 5 Plus 16GB",
     description: "حاسبة لوحية قوية بذاكرة 16GB ومعالج ثماني النواة لمشاريع الذكاء الاصطناعي والأنظمة المدمجة.",
-    price: 155000,
+    price: 270000,
     image: "/products/orange-pi-5-plus.png",
     category: "لوحات",
     specs: {
@@ -164,7 +164,7 @@ export const products: Product[] = [
     id: "gas-sensor",
     name: "حساس غاز",
     description: "حساس MQ-2 للكشف عن تسرب الغاز والدخان في البيئة.",
-    price: 3000,
+    price: 4000,
     image: "/products/gas-sensor.png",
     category: "حساسات",
     specs: {
@@ -244,7 +244,7 @@ export const products: Product[] = [
     id: "soil-sensor",
     name: "حساس رطوبة تربة",
     description: "حساس لقياس نسبة رطوبة التربة في مشاريع الزراعة الذكية.",
-    price: 1500,
+    price: 3000,
     image: "/products/soil-sensor.png",
     category: "حساسات",
     specs: {
