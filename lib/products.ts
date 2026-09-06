@@ -1,10 +1,10 @@
-export type Product = {
+Export type Product = {
   id: string
   name: string
   description: string
   price: number
   image: string
-  category: "لوحات" | "حساسات" | "مكونات" | "محركات"
+  category: "لوحات" | "حساسات" | "شاشات" | "مكونات" | "محركات"
 }
 
 export const WHATSAPP_NUMBER = "9647832213080"
@@ -17,16 +17,16 @@ export const products: Product[] = [
     price: 7000,
     image: "/products/arduino-uno.png",
     category: "لوحات",
-    },
-    {
+  },
+  {
     id: "orange-pi-5-plus-16gb",
     name: "Orange Pi 5 Plus 16GB",
     price: 155000,
     category: "لوحات",
     image: "/products/orange-pi-5-plus.png",
     description: "لوحة قوية بمعالج RK3588 وذاكرة 16GB"
-    },
-    }
+  },
+  {
     id: "breadboard",
     name: "بريدبورد",
     description: "لوحة تجارب بدون لحام لتوصيل الدوائر الإلكترونية بسهولة.",
@@ -131,8 +131,8 @@ export function formatPrice(price: number) {
 }
 
 export function whatsappLink(product: Product) {
-  const message = `مرحباً، أرغب بطلب المنتج التالي من متجر Pixel Store:\n\n• ${product.name}\n• السعر: ${formatPrice(
+  const message = مرحباً، أرغب بطلب المنتج التالي من متجر Pixel Store:\n\n• ${product.name}\n• السعر: ${formatPrice(
     product.price,
-  )} دينار عراقي\n\nهل هو متوفر؟`
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  )} دينار عراقي\n\nهل هو متوفر؟
+  return https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}
 }
