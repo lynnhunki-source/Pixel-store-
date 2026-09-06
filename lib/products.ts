@@ -46,7 +46,7 @@ export const products: Product[] = [
     id: "gas-sensor",
     name: "حساس غاز",
     description: "حساس MQ-2 للكشف عن تسرب الغاز والدخان في البيئة.",
-    price: 3000,
+    price: 4000,
     image: "/products/gas-sensor.png",
     category: "حساسات",
   },
