@@ -54,7 +54,7 @@ export const products: Product[] = [
     id: "wires",
     name: "وايرات توصيل",
     description: "مجموعة أسلاك توصيل ملونة لربط المكونات على البريدبورد.",
-    price: 2500,
+    price: 2000,
     image: "/products/wires.png",
     category: "مكونات",
   },
