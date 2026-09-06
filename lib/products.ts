@@ -78,7 +78,7 @@ export const products: Product[] = [
     id: "soil-sensor",
     name: "حساس رطوبة تربة",
     description: "حساس لقياس نسبة رطوبة التربة في مشاريع الزراعة الذكية.",
-    price: 1500,
+    price: 2000,
     image: "/products/soil-sensor.png",
     category: "حساسات",
   },
