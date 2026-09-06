@@ -2,10 +2,11 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Plus, Check } from "lucide-react"
+import { Plus, Check, Info } from "lucide-react"
 import { formatPrice, whatsappLink, type Product } from "@/lib/products"
 import { useCart } from "@/lib/cart-context"
 import { useToast } from "@/lib/toast-context"
+import { ProductDetailModal } from "@/components/product-detail-modal"
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -24,6 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart()
   const { showToast } = useToast()
   const [added, setAdded] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
@@ -42,9 +44,18 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/40">
-      <div className="relative aspect-square overflow-hidden bg-secondary/40">
+      <button
+        type="button"
+        onClick={() => setShowDetails(true)}
+        className="relative block aspect-square overflow-hidden bg-secondary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
+        aria-label={`عرض تفاصيل ${product.name}`}
+      >
         <span className="absolute right-3 top-3 z-10 rounded-full bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-sm">
           {product.category}
+        </span>
+        <span className="absolute bottom-3 left-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-background/70 px-3 py-1 text-xs font-medium text-primary opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          <Info className="size-3.5" />
+          التفاصيل
         </span>
         <Image
           src={product.image || "/placeholder.svg"}
@@ -53,7 +64,7 @@ export function ProductCard({ product }: { product: Product }) {
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      </div>
+      </button>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex flex-col gap-1.5">
@@ -106,8 +117,21 @@ export function ProductCard({ product }: { product: Product }) {
             <WhatsAppIcon className="size-4" />
             طلب عبر واتساب
           </a>
+
+          <button
+            type="button"
+            onClick={() => setShowDetails(true)}
+            className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+          >
+            <Info className="size-4" />
+            التفاصيل الفنية
+          </button>
         </div>
       </div>
+
+      {showDetails && (
+        <ProductDetailModal product={product} onClose={() => setShowDetails(false)} />
+      )}
     </article>
   )
 }
