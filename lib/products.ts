@@ -44,7 +44,7 @@ export const products: Product[] = [
     id: "esp32-s3-n16r8",
     name: "ESP32-S3 N16R8",
     description: "متحكم قوي مع WiFi و Bluetooth، ذاكرة فلاش 16MB و PSRAM 8MB لمشاريع إنترنت الأشياء.",
-    price: 20000,
+    price: 16000,
     image: "/products/esp32-s3.png",
     category: "لوحات",
     specs: {
