@@ -24,7 +24,7 @@ export const products: Product[] = [
     id: "orange-pi-5-plus",
     name: "Orange Pi 5 Plus 16GB",
     description: "حاسبة لوحية قوية بذاكرة 16GB ومعالج ثماني النواة لمشاريع الذكاء الاصطناعي والأنظمة المدمجة.",
-    price: 270000,
+    price: 320000,
     image: "/products/orange-pi-5-plus.png",
     category: "لوحات",
     specs: {
